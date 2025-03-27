@@ -18,7 +18,7 @@ sources = Glob("src/*.cpp")
 
 if env["platform"] == "macos":
     library = env.SharedLibrary(
-        "Vodyanoi/bin/libgdexample.{}.{}.framework/libgdexample.{}.{}".format(
+        "pixel-lance/bin/libgdexample.{}.{}.framework/libgdexample.{}.{}".format(
             env["platform"], env["target"], env["platform"], env["target"]
         ),
         source=sources,
@@ -26,17 +26,17 @@ if env["platform"] == "macos":
 elif env["platform"] == "ios":
     if env["ios_simulator"]:
         library = env.StaticLibrary(
-            "Vodyanoi/bin/libgdexample.{}.{}.simulator.a".format(env["platform"], env["target"]),
+            "pixel-lance/bin/libgdexample.{}.{}.simulator.a".format(env["platform"], env["target"]),
             source=sources,
         )
     else:
         library = env.StaticLibrary(
-            "Vodyanoi/bin/libgdexample.{}.{}.a".format(env["platform"], env["target"]),
+            "pixel-lance/bin/libgdexample.{}.{}.a".format(env["platform"], env["target"]),
             source=sources,
         )
 else:
     library = env.SharedLibrary(
-        "Vodyanoi/bin/libgdexample.windows.template_debug.x86_64.dll",
+        "pixel-lance/bin/libgdexample.windows.template_debug.x86_64.dll",
         source=sources,
 )
 
