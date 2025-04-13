@@ -50,4 +50,4 @@ protected:
 
 };
 
-#endif
+#endif // TASK_H
