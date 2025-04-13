@@ -13,8 +13,8 @@ private:
     int current_index = 0;
 
 public:
-    Selector();
-    ~Selector();
+    Selector() = default;
+    ~Selector() = default;
 
     void start();
 

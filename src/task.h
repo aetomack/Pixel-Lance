@@ -17,8 +17,8 @@ public:
         CANCELLED
     };
 
-    Task(); 
-    ~Task();
+    Task() = default; 
+    virtual ~Task() = default;
 
     // Lifecycle control methods
     void running();
@@ -49,5 +49,7 @@ protected:
     static void _bind_methods();
 
 };
+
+VARIANT_ENUM_CAST(Task::Status);
 
 #endif // TASK_H

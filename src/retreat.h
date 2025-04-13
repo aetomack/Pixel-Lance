@@ -10,11 +10,11 @@ protected:
     static void _bind_methods();
 
 public:
-    Retreat();
-    ~Retreat();
+    Retreat() = default;
+    ~Retreat() = default;
 
     void run() override;
 
 };
 
-#endif
+#endif // RETREAT_H

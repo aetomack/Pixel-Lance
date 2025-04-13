@@ -10,8 +10,8 @@ protected:
     static void _bind_methods();
 
 public:
-    Move();
-    ~Move();
+    Move() = default;
+    ~Move() = default;
 
     void run() override;
 };

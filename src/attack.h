@@ -10,8 +10,8 @@ protected:
     static void _bind_methods();
 
 public: 
-    Attack();
-    ~Attack();
+    Attack() = default;
+    ~Attack() = default;
 
     void run() override; // logic for attacking
 };

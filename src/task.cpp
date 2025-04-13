@@ -46,7 +46,7 @@ void Task::fail() {
 
 void Task::cancel() {
     if (status==RUNNING) {
-        status == CANCELLED;
+        status = CANCELLED;
 
         for (int i = 0; i <get_child_count(); ++i) {
             Node* child = Object::cast_to<Node>(get_child(i));

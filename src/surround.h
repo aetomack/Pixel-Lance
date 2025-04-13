@@ -10,8 +10,8 @@ protected:
     static void _bind_methods();
 
 public:
-    Surround();
-    ~Surround();
+    Surround() = default;
+    ~Surround() = default;
 
     void run() override; // Logic for surrounding
 };
