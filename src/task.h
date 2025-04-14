@@ -1,12 +1,12 @@
 #ifndef TASK_H
 #define TASK_H
 
-#include <godot_cpp/classes/node.hpp>
+#include <godot_cpp/classes/node2d.hpp>
 #include <godot_cpp/core/class_db.hpp>
 
 using namespace godot;
-class Task: public Node {
-    GDCLASS(Task, Node)
+class Task: public Node2D {
+    GDCLASS(Task, Node2D)
 
 public:
     enum Status {

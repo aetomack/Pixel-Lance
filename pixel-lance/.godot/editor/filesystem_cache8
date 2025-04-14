@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1744561874
+::res://::1744666634
 icon.svg::CompressedTexture2D::986161275813195015::1743639841::1744156831::1::::<><>::
 ::res://assets/::1743639841
 ::res://assets/Deco/::1744156832
@@ -266,7 +266,8 @@ Ribbon_Yellow_Connection_Right.png::CompressedTexture2D::7598357852028325::17436
 Ribbon_Yellow_Connection_Right_Pressed.png::CompressedTexture2D::2379092788555671462::1743639841::1744156831::1::::<><>::
 Ribbon_Yellow_Connection_Up.png::CompressedTexture2D::2209875123235281097::1743639841::1744156831::1::::<><>::
 Ribbon_Yellow_Connection_Up_Pressed.png::CompressedTexture2D::502498907356201027::1743639841::1744156831::1::::<><>::
-::res://bin/::1744508576
+::res://bin/::1744666470
+gdexample.gdextension::GDExtension::-1::1744666470::0::1::::<><>::
 ::res://scenes/::1744156801
 babyGronk.tscn::PackedScene::1321378578728762916::1744156801::0::1::::<><>::uid://bpm8swqtwf0::::res://assets/Factions/Knights/Troops/Pawn/Yellow/Pawn_Yellow.png
 enemy.tscn::PackedScene::691278703659310314::1744156801::0::1::::<><>::uid://bi1a5d404fhn2::::res://assets/Factions/Goblins/Troops/Torch/Purple/Torch_Purple.png

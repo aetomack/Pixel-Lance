@@ -1,7 +1,7 @@
 #include "task.h"
 
 #include <godot_cpp/classes/object.hpp>
-#include <godot_cpp/classes/node.hpp>
+#include <godot_cpp/classes/node2d.hpp>
 
 
 using namespace godot;
