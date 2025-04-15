@@ -170,17 +170,3 @@ shape = SubResource("CircleShape2D_wclb7")
 shape = SubResource("CircleShape2D_d8fje")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-
-[node name="AI" type="Node" parent="."]
-
-[node name="Sequence" type="Sequence" parent="AI"]
-
-[node name="Move" type="Move" parent="AI/Sequence"]
-
-[node name="Surround" type="Surround" parent="AI/Sequence"]
-
-[node name="Selector" type="Selector" parent="AI/Sequence"]
-
-[node name="Attack" type="Attack" parent="AI/Sequence/Selector"]
-
-[node name="Retreat" type="Retreat" parent="AI/Sequence/Selector"]

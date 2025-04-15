@@ -8,6 +8,7 @@
 #include "selector.h"
 #include "sequence.h"
 #include "surround.h"
+#include "volumeslider.h"
 
 #include <gdextension_interface.h>
 #include <godot_cpp/core/defs.hpp>

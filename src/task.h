@@ -40,14 +40,18 @@ public:
     void set_control(Object* p_control) { control = p_control; }
     void set_tree(Object* p_tree) { tree = p_tree; }
 
-private:      
-    Object* control = nullptr;
-    Object* tree = nullptr;
-    Status status = FRESH;
-
+    //getter mothods
+    Object* get_control() { return control; }
+    Object* get_tree() { return tree; }
+    Status get_status() { return status; }
+    
 protected:
     static void _bind_methods();
 
+private:
+    Object* control = nullptr;
+    Object* tree = nullptr;
+    Status status = FRESH;
 };
 
 VARIANT_ENUM_CAST(Task::Status);

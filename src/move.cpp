@@ -7,12 +7,15 @@
 #include <godot_cpp/classes/character_body2d.hpp>
 
 
-void Move::_bind_methods(){}
+void Move::_bind_methods(){
+    ClassDB::bind_method(D_METHOD("_process", "delta"), &Move::_process);
+    ClassDB::bind_method(D_METHOD("run"), &Move::run);
+}
 
 void Move::run(){
     // logic for moving enemy to player position
-    if (!player && tree) {
-        player = Object::cast_to<CharacterBody2D>(tree->get("player"));
+    if (!player && get_tree()) {
+        player = Object::cast_to<CharacterBody2D>(get_tree()->get("player"));
     }
 
     if (!agent) {
@@ -29,24 +32,28 @@ void Move::run(){
     running();
 }
 
-void Move::_physics_process(float delta) {
-    if (status != RUNNING) { return; }
+void Move::_physics_process(double delta) {
+    if (get_status() != RUNNING) { return; }
     if (!agent || !player) { return; }
-
-    Vector2 current_position = agent->get_global_position();
-    Vector2 target_position = player->get_global_position();
-
+    
     if (agent->is_navigation_finished()) {
         success(); 
         std::printf("Reached Player");
         return;   
     }
-
     Vector2 next_path_position = agent->get_next_path_position();
+
+    // Get parent that moves (assumes Move is child of Node2D)
+    Node2D* actor = Object::cast_to<Node2D>(get_parent());
+    if (!actor) {
+        fail();
+        return;
+    }
+
+    // Move parent toward next path position
+    Vector2 current_position = actor->get_global_position();
     Vector2 direction = (next_path_position - current_position).normalized();
     Vector2 velocity = direction * SPEED * delta;
 
-    if (Node2D* node = Object::cast_to<Node2D>(get_parent())) {
-        node->set_global_position(current_position + velocity);
-    }
+    actor->set_global_position(current_position + velocity);
 }
