@@ -1,6 +1,13 @@
 #include "register_types.h"
 
 #include "ai.h"
+#include "task.h"
+#include "attack.h"
+#include "move.h"
+#include "retreat.h"
+#include "selector.h"
+#include "sequence.h"
+#include "surround.h"
 
 #include <gdextension_interface.h>
 #include <godot_cpp/core/defs.hpp>
@@ -14,6 +21,14 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 	}
 
 	GDREGISTER_CLASS(Ai);
+	GDREGISTER_CLASS(Task);
+	GDREGISTER_CLASS(Attack);
+	GDREGISTER_CLASS(Move);
+	GDREGISTER_CLASS(Retreat);
+	GDREGISTER_CLASS(Selector);
+	GDREGISTER_CLASS(Sequence);
+	GDREGISTER_CLASS(Surround);
+	GDREGISTER_CLASS(VolumeSlider);
 }
 
 void uninitialize_example_module(ModuleInitializationLevel p_level) {

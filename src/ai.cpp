@@ -26,7 +26,7 @@ void Ai::_ready() {
         random = rand() % 100;
         target = _getCircle(random, player);
     } else {
-        UtilityFunctions::print("⚠️ Player not found. Skipping AI setup.");
+        UtilityFunctions::print("Player not found. Skipping AI setup.");
     }
 }
 void Ai::_physics_process(double delta) {
