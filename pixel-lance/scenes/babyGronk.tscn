@@ -169,6 +169,8 @@ shape = SubResource("CircleShape2D_wclb7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_d8fje")
 
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
 [node name="AI" type="Node" parent="."]
 
 [node name="Sequence" type="Sequence" parent="AI"]
