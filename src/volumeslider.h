@@ -1,23 +1,33 @@
-#ifndef VOLUMESLIDER_H
-#define VOLUMESLIDER_H
+#ifndef VOLUME_SLIDER_H
+#define VOLUME_SLIDER_H
 
 #include <godot_cpp/classes/h_slider.hpp>
-#include <godot_cpp/classes/audio_server.hpp>
-#include <godot_cpp/core/class_db.hpp>
-#include <godot_cpp/core/math.hpp>
+
 namespace godot {
-    class VolumeSlider : public HSlider {
-        GDCLASS(VolumeSlider, HSlider);
+
+class VolumeSlider : public HSlider {
+    GDCLASS(VolumeSlider, HSlider);
 
 protected:
-    static void _bind_methods() {
-        ClassDB::bind_method(D_METHOD("on_value_changed", "value"), &VolumeSlider::on_value_changed);
-    }   
-public:;
-    void on_value_changed (double value);
+    static void _bind_methods();
+
+public:
+    VolumeSlider();
+    ~VolumeSlider();
+
+    void _ready() override;
+    void on_value_changed(double value);
+
+    void toggle_mute();
+    bool is_muted() const;
 
 private:
-    float linear_to_db (float linear);
+    float linear_to_db(float linear);
+    float db_to_linear(float db);
+
+    float last_volume = 100.0f; // default to full volume
 };
-#endif // VOLUMESLIDER_H
-}
+
+} // namespace godot
+
+#endif // VOLUME_SLIDER_H
