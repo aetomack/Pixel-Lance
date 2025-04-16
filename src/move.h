@@ -13,7 +13,7 @@ protected:
     static void _bind_methods();
 
 private: 
-    double SPEED = 200.0;
+    double speed = 200.0;
     CharacterBody2D* player = nullptr;
     NavigationAgent2D* agent = nullptr;
 
@@ -22,7 +22,7 @@ public:
     ~Move() = default;
 
     void run() override;
-    void _physics_process(double delta);
+    void _physics_process(double delta) override;
 };
 
 #endif // MOVE_H

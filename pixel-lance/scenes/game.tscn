@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://bn7417o351rvx"]
+[gd_scene load_steps=6 format=4 uid="uid://bn7417o351rvx"]
+
+[ext_resource type="Texture2D" uid="uid://b7n0wvatevx71" path="res://assets/Terrain/Ground/Tilemap_Flat.png" id="1_41o8e"]
+[ext_resource type="PackedScene" uid="uid://s3c6aot7p40g" path="res://scenes/babyGronk.tscn" id="2_d1o61"]
+[ext_resource type="PackedScene" uid="uid://j34i2xwbagni" path="res://scenes/enemy.tscn" id="3_vbo0p"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mr0ig"]
+texture = ExtResource("1_41o8e")
+0:0/size_in_atlas = Vector2i(12, 12)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3dqbd"]
+sources/0 = SubResource("TileSetAtlasSource_mr0ig")
 
 [node name="Game Root" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD6/wUAAAAAAAAAAAAGAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAASAAUAAAAAAAAAAAAUAPj/AAAAAAAAAAALAPr/AAAAAAAAAAASAPr/AAAAAAAAAAACAPr/AAAAAAAAAAD3//r/AAAAAAAAAADr//3/AAAAAAAAAADu/wYAAAAAAAAAAADx/wQAAAAAAAAAAADr//f/AAAAAAAAAADs//f/AAAAAAAAAAD3//L/AAAAAAAAAAD///D/AAAAAAAAAAAAAPD/AAAAAAAAAAABAPD/AAAAAAAAAAADAPD/AAAAAAAAAAAEAPD/AAAAAAAAAAAFAPD/AAAAAAAAAAAGAPD/AAAAAAAAAAAHAPD/AAAAAAAAAAAIAPD/AAAAAAAAAAAJAPD/AAAAAAAAAAAKAPD/AAAAAAAAAAALAPD/AAAAAAAAAAASAPD/AAAAAAAAAAATAPD/AAAAAAAAAAAUAPD/AAAAAAAAAAAVAPD/AAAAAAAAAAAgAPH/AAAAAAAAAAAgAAEAAAAAAAAAAAAgAAIAAAAAAAAAAAAgAAMAAAAAAAAAAAAbAAEAAAAAAAAAAAAbAAAAAAAAAAAAAAAkAPr/AAAAAAAAAAAdAPr/AAAAAAAAAAAhAA0AAAAAAAAAAAAWAA0AAAAAAAAAAAAXAA0AAAAAAAAAAAAXAAwAAAAAAAAAAAASAAwAAAAAAAAAAAADABAAAAAAAAAAAAD0/w8AAAAAAAAAAADz/w8AAAAAAAAAAADy/w8AAAAAAAAAAADx/w8AAAAAAAAAAADw/w8AAAAAAAAAAAD9/w8AAAAAAAAAAAD+/w8AAAAAAAAAAAD//w8AAAAAAAAAAAAAAA8AAAAAAAAAAAABAA8AAAAAAAAAAAACAA8AAAAAAAAAAAADAA8AAAAAAAAAAAAMAA4AAAAAAAAAAADi/wcAAAAAAAAAAADj/wcAAAAAAAAAAADo//7/AAAAAAAAAADi//f/AAAAAAAAAADi//b/AAAAAAAAAADf//7/AAAAAAAAAADq/xMAAAAAAAAAAADl/xEAAAAAAAAAAADs//H/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_3dqbd")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_d1o61")]
+position = Vector2(-12, 22)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(12, -22)
+
+[node name="Enemy" parent="." instance=ExtResource("3_vbo0p")]
+position = Vector2(184, -116)

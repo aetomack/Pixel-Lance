@@ -1,6 +1,12 @@
 #include "selector.h"
 
-void Selector::_bind_methods(){}
+void Selector::_bind_methods(){
+    ClassDB::bind_method(D_METHOD("start"), &Selector::start);
+    ClassDB::bind_method(D_METHOD("run"), &Selector::run);
+    ClassDB::bind_method(D_METHOD("child_success"), &Selector::child_success);
+    ClassDB::bind_method(D_METHOD("child_fail"), &Selector::child_fail);
+    ClassDB::bind_method(D_METHOD("child_running"), &Selector::child_running);
+}
 
 void Selector::start() {
     Task::start();

@@ -31,6 +31,7 @@ void Task::running() {
 }
 
 void Task::success() {
+    std::printf("Task::success");
     status = SUCCEEDED;
     if (control) {
         control -> call("child_success");
@@ -38,6 +39,8 @@ void Task::success() {
 }
 
 void Task::fail() {
+    std::printf("Task::fail");
+
     status = FAILED;
     if (control) {
         control -> call("child_fail");
@@ -75,6 +78,7 @@ void Task::child_running() {
 }
 
 void Task::start(){
+    std::printf("Task::start");
     status = FRESH;
 
     for(int i = 0; i < get_child_count(); ++i) {

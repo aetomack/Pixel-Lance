@@ -1,6 +1,13 @@
 #include "sequence.h"
+#include <stdlib.h>
 
-void Sequence::_bind_methods() {}
+void Sequence::_bind_methods() {
+    ClassDB::bind_method(D_METHOD("start"), &Sequence::start);
+    ClassDB::bind_method(D_METHOD("run"), &Sequence::run);
+    ClassDB::bind_method(D_METHOD("child_success"), &Sequence::child_success);
+    ClassDB::bind_method(D_METHOD("child_fail"), &Sequence::child_fail);
+    ClassDB::bind_method(D_METHOD("child_running"), &Sequence::child_running);
+}
 
 void Sequence::start() {
     Task::start();
