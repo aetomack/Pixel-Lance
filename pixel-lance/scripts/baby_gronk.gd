@@ -15,3 +15,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+
+func _on_battle_box_body_entered(body: Node2D) -> void:
+	if body.is_in_group("enemy"):
+		body.attack_player()

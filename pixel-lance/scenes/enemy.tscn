@@ -1,7 +1,10 @@
 [gd_scene load_steps=37 format=3 uid="uid://j34i2xwbagni"]
 
-[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_0kufl"]
 [ext_resource type="Texture2D" uid="uid://bi1a5d404fhn2" path="res://assets/Factions/Goblins/Troops/Torch/Purple/Torch_Purple.png" id="1_ki6fu"]
+
+[sub_resource type="GDScript" id="GDScript_t2mrm"]
+script/source = "extends CharacterBody2D
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4pf3l"]
 atlas = ExtResource("1_ki6fu")
@@ -179,7 +182,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_5n6do")
 }],
 "loop": true,
-"name": &"attack_horizontal",
+"name": &"attack_right",
 "speed": 10.0
 }, {
 "frames": [{
@@ -256,29 +259,18 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jq82s"]
-radius = 34.0588
+radius = 20.6155
 
-[node name="Enemy" type="CharacterBody2D"]
-script = ExtResource("1_0kufl")
+[node name="Enemy" type="EnemyAI"]
+position = Vector2(-32.5535, 145.101)
+velocity = Vector2(0.91212, -4.06561)
+script = SubResource("GDScript_t2mrm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_0yjmt")
-animation = &"idle"
-autoplay = "idle"
+animation = &"attack_right"
+autoplay = "move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_jq82s")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-
-[node name="Sequence" type="Sequence" parent="."]
-
-[node name="Surround" type="Surround" parent="Sequence"]
-
-[node name="Selector" type="Selector" parent="Sequence"]
-
-[node name="Attack" type="Attack" parent="Sequence/Selector"]
-
-[node name="Retreat" type="Retreat" parent="Sequence/Selector"]
-
-[node name="Move" type="Move" parent="."]
