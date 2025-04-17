@@ -1,8 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://s3c6aot7p40g"]
+[gd_scene load_steps=24 format=3 uid="uid://s3c6aot7p40g"]
 
 [ext_resource type="Texture2D" uid="uid://bpm8swqtwf0" path="res://assets/Factions/Knights/Troops/Pawn/Yellow/Pawn_Yellow.png" id="1_2sohl"]
 [ext_resource type="Script" path="res://scripts/baby_gronk.gd" id="1_uks25"]
-[ext_resource type="Script" path="res://scripts/battle_box.gd" id="3_mkjfj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8suae"]
 atlas = ExtResource("1_2sohl")
@@ -168,7 +167,6 @@ frame_progress = 0.7868
 shape = SubResource("CircleShape2D_wclb7")
 
 [node name="BattleBox" type="Area2D" parent="."]
-script = ExtResource("3_mkjfj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BattleBox"]
 shape = SubResource("CircleShape2D_l4504")
