@@ -1,13 +1,6 @@
 #include "register_types.h"
 
-#include "ai.h"
-#include "task.h"
-#include "attack.h"
-#include "move.h"
-#include "retreat.h"
-#include "selector.h"
-#include "sequence.h"
-#include "surround.h"
+#include "enemy_ai.h"
 #include "volumeslider.h"
 
 #include <gdextension_interface.h>
@@ -21,14 +14,7 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 		return;
 	}
 
-	GDREGISTER_CLASS(Ai);
-	GDREGISTER_CLASS(Task);
-	GDREGISTER_CLASS(Attack);
-	GDREGISTER_CLASS(Move);
-	GDREGISTER_CLASS(Retreat);
-	GDREGISTER_CLASS(Selector);
-	GDREGISTER_CLASS(Sequence);
-	GDREGISTER_CLASS(Surround);
+	GDREGISTER_CLASS(EnemyAI);
 	GDREGISTER_CLASS(VolumeSlider);
 }
 
