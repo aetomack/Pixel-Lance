@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bn7417o351rvx"]
+[gd_scene load_steps=8 format=3 uid="uid://bn7417o351rvx"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_ceph5"]
 [ext_resource type="PackedScene" uid="uid://s3c6aot7p40g" path="res://scenes/babyGronk.tscn" id="2_d1o61"]
 [ext_resource type="Script" path="res://scenes/ui.gd" id="3_lg2cb"]
 [ext_resource type="Texture2D" uid="uid://dagylx2tote8q" path="res://assets/UI/Icons/Regular_02.png" id="4_4dix6"]
 [ext_resource type="Texture2D" uid="uid://ds4i84oipyosm" path="res://assets/UI/Ribbons/Ribbon_Yellow_3Slides.png" id="5_xm5ip"]
+[ext_resource type="Script" path="res://scenes/menu_button.gd" id="6_jtrbk"]
 
 [sub_resource type="Curve2D" id="Curve2D_73xy7"]
 _data = {
@@ -49,5 +50,6 @@ offset_top = 573.0
 offset_right = 1117.0
 offset_bottom = 645.0
 icon = ExtResource("4_4dix6")
+script = ExtResource("6_jtrbk")
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

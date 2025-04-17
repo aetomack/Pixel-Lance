@@ -1,4 +1,2 @@
 res://scenes/game.tscn
-res://scenes/enemy.tscn
-res://scenes/babyGronk.tscn
-res://scenes/ui.gd
+res://scenes/menu_button.gd
