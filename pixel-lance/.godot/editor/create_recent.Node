@@ -1,10 +1,7 @@
-CollisionShape2D
-Area2D
-Timer
+VolumeSlider
 MenuButton
 OptionButton
 CheckButton
-VolumeSlider
 CanvasLayer
 AudioStreamPlayer2D
 Marker2D

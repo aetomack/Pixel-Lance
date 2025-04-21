@@ -1,6 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1745254511
+::res://::1745257430
 icon.svg::CompressedTexture2D::986161275813195015::1743523411::1744909506::1::::<><>::
+Pixel-Lance-Main-Theme - copy _Main Repeat.mp3::AudioStreamMP3::3522625448530716601::1745257430::1745257509::1::::<><>::
+Pixel-Lance-Main-Theme-copy-_Main-Repeat-[AudioTrimmer.com].ogg::AudioStreamOggVorbis::2206169510100849329::1745257430::1745257509::1::::<><>::
+Pixel-Lance-Main-Theme-copy-_Main-Repeat.ogg::AudioStreamOggVorbis::5149623984654007263::1745257430::1745257509::1::::<><>::
 ::res://assets/::1744736843
 ::res://assets/Deco/::1744909506
 01.png::CompressedTexture2D::8985257474465574191::1743523411::1744909506::1::::<><>::
@@ -266,15 +269,17 @@ Ribbon_Yellow_Connection_Right.png::CompressedTexture2D::7598357852028325::17435
 Ribbon_Yellow_Connection_Right_Pressed.png::CompressedTexture2D::2379092788555671462::1743523411::1744909506::1::::<><>::
 Ribbon_Yellow_Connection_Up.png::CompressedTexture2D::2209875123235281097::1743523411::1744909506::1::::<><>::
 Ribbon_Yellow_Connection_Up_Pressed.png::CompressedTexture2D::502498907356201027::1743523411::1744909506::1::::<><>::
-::res://bin/::1744910747
+::res://bin/::1745257430
 gdexample.gdextension::GDExtension::-1::1744736843::0::1::::<><>::
 ::res://bin/libgdexample.macos.template_debug.framework/::1744910748
-::res://scenes/::1745186872
-babyGronk.tscn::PackedScene::1321378578728762916::1745186785::0::1::::<><>::uid://bpm8swqtwf0::::res://assets/Factions/Knights/Troops/Pawn/Yellow/Pawn_Yellow.png<>res://scripts/baby_gronk.gd
-enemy.tscn::PackedScene::691278703659310314::1745186872::0::1::::<><>::uid://bi1a5d404fhn2::::res://assets/Factions/Goblins/Troops/Torch/Purple/Torch_Purple.png
-game.tscn::PackedScene::3366744666236980309::1745186785::0::1::::<><>::res://scripts/game.gd<>uid://s3c6aot7p40g::::res://scenes/babyGronk.tscn<>res://scenes/ui.gd<>uid://dagylx2tote8q::::res://assets/UI/Icons/Regular_02.png<>uid://ds4i84oipyosm::::res://assets/UI/Ribbons/Ribbon_Yellow_3Slides.png
+::res://scenes/::1745257430
+babyGronk.tscn::PackedScene::1321378578728762916::1745257065::0::1::::<><>::uid://bpm8swqtwf0::::res://assets/Factions/Knights/Troops/Pawn/Yellow/Pawn_Yellow.png<>res://scripts/baby_gronk.gd
+enemy.tscn::PackedScene::691278703659310314::1745257065::0::1::::<><>::uid://bi1a5d404fhn2::::res://assets/Factions/Goblins/Troops/Torch/Purple/Torch_Purple.png
+game.tscn::PackedScene::3366744666236980309::1745257342::0::1::::<><>::res://scripts/game.gd<>uid://s3c6aot7p40g::::res://scenes/babyGronk.tscn<>res://scenes/ui.gd<>uid://dagylx2tote8q::::res://assets/UI/Icons/Regular_02.png<>uid://ds4i84oipyosm::::res://assets/UI/Ribbons/Ribbon_Yellow_3Slides.png
+menu_button.gd::GDScript::-1::1745257430::0::1::::<>MenuButton<>::
+music.gd::GDScript::-1::1745257430::0::1::::<>AudioStreamPlayer2D<>::
 mute_unmute.gd::GDScript::-1::1744909444::0::1::::<>CheckButton<>::
 ui.gd::GDScript::-1::1744909444::0::1::::<>CanvasLayer<>::
-::res://scripts/::1745184648
-baby_gronk.gd::GDScript::-1::1745184641::0::1::::<>CharacterBody2D<>::
-game.gd::GDScript::-1::1745184648::0::1::::<>Node2D<>::
+::res://scripts/::1745257128
+baby_gronk.gd::GDScript::-1::1745255478::0::1::::<>CharacterBody2D<>::
+game.gd::GDScript::-1::1745257128::0::1::::<>Node2D<>::
