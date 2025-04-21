@@ -1,11 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://bn7417o351rvx"]
+[gd_scene load_steps=12 format=3 uid="uid://bn7417o351rvx"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_ceph5"]
 [ext_resource type="PackedScene" uid="uid://s3c6aot7p40g" path="res://scenes/babyGronk.tscn" id="2_d1o61"]
+[ext_resource type="AudioStream" uid="uid://6oxj3w0iea8p" path="res://Pixel-Lance-Main-Theme-copy-_Main-Repeat-[AudioTrimmer.com].ogg" id="3_6tfk6"]
 [ext_resource type="Script" path="res://scenes/ui.gd" id="3_lg2cb"]
 [ext_resource type="Texture2D" uid="uid://dagylx2tote8q" path="res://assets/UI/Icons/Regular_02.png" id="4_4dix6"]
+[ext_resource type="Script" path="res://scenes/music.gd" id="4_lw20t"]
 [ext_resource type="Texture2D" uid="uid://ds4i84oipyosm" path="res://assets/UI/Ribbons/Ribbon_Yellow_3Slides.png" id="5_xm5ip"]
 [ext_resource type="Script" path="res://scenes/menu_button.gd" id="6_jtrbk"]
+[ext_resource type="Texture2D" uid="uid://byd6f2d70h837" path="res://assets/UI/Ribbons/Ribbon_Red_3Slides.png" id="9_p1xyt"]
+[ext_resource type="Texture2D" uid="uid://dgeglex28ve2j" path="res://assets/UI/Icons/Regular_03.png" id="10_t50h8"]
 
 [sub_resource type="Curve2D" id="Curve2D_73xy7"]
 _data = {
@@ -35,21 +39,45 @@ rotation = 0.0114655
 autostart = true
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_6tfk6")
+autoplay = true
+max_distance = 1e+09
+area_mask = 0
+playback_type = 1
+script = ExtResource("4_lw20t")
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("3_lg2cb")
 
 [node name="RibbonYellow3Slides" type="Sprite2D" parent="UI"]
-position = Vector2(1085, 610)
-scale = Vector2(0.65625, 1)
+position = Vector2(1093, 610)
+scale = Vector2(0.572917, 1)
 texture = ExtResource("5_xm5ip")
 
 [node name="MenuButton" type="MenuButton" parent="UI"]
-offset_left = 1045.0
-offset_top = 573.0
-offset_right = 1117.0
-offset_bottom = 645.0
+offset_left = 1054.0
+offset_top = 575.0
+offset_right = 1126.0
+offset_bottom = 647.0
 icon = ExtResource("4_4dix6")
 script = ExtResource("6_jtrbk")
+
+[node name="RibbonRed3Slides" type="Sprite2D" parent="UI"]
+position = Vector2(926, 611)
+scale = Vector2(1.14583, 1)
+texture = ExtResource("9_p1xyt")
+
+[node name="Regular03" type="Sprite2D" parent="UI"]
+position = Vector2(881, 612)
+texture = ExtResource("10_t50h8")
+
+[node name="VolumeSlider" type="VolumeSlider" parent="UI/Regular03"]
+offset_left = 18.0
+offset_top = -12.0
+offset_right = 113.0
+offset_bottom = 4.0
+focus_mode = 1
+mouse_filter = 1
+value = 100.0
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

@@ -7,9 +7,9 @@ func _ready():
 
 	# Add items to the menu
 	popup.add_item("Resume", 0)
-	popup.add_item("Restart", 1)
 	popup.add_separator()
-	popup.add_item("Exit to Main Menu", 2)
+	popup.add_item("Restart", 1)
+	
 
 	# Connect the signal to the callback function
 	popup.connect("id_pressed", Callable(self, "_on_menu_selected"))
@@ -29,20 +29,10 @@ func _on_menu_selected(id):
 			print("Restart")
 			get_tree().paused = false
 			restart_game()
-		2:
-			# Exit to the main menu when "Exit to Main Menu" is selected
-			print("Exit to Main Menu")
-			exit_to_main_menu()
-
 # Function to restart the game
 func restart_game():
 	# You can reload the current scene to restart the game
 	get_tree().reload_current_scene()
-
-# Function to go back to the main menu (this assumes you have a "Main Menu" scene)
-func exit_to_main_menu():
-	# Replace "MainMenu" with the name of your actual main menu scene
-	get_tree().change_scene("res://MainMenu.tscn")
 
 # This function will be called when the MenuButton is pressed
 func _pressed():

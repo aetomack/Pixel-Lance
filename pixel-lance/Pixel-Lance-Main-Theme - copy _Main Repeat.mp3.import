@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bqgnekg8qb7pt"
+path="res://.godot/imported/Pixel-Lance-Main-Theme - copy _Main Repeat.mp3-064ace56574a95298fa71880bc49e225.mp3str"
+
+[deps]
+
+source_file="res://Pixel-Lance-Main-Theme - copy _Main Repeat.mp3"
+dest_files=["res://.godot/imported/Pixel-Lance-Main-Theme - copy _Main Repeat.mp3-064ace56574a95298fa71880bc49e225.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

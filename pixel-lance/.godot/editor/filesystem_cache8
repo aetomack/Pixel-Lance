@@ -1,6 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1744909140
+::res://::1745213857
 icon.svg::CompressedTexture2D::986161275813195015::1744127497::1744907075::1::::<><>::
+Pixel-Lance-Main-Theme - copy _Main Repeat.mp3::AudioStreamMP3::3522625448530716601::1744906464::1744946432::1::::<><>::
+Pixel-Lance-Main-Theme-copy-_Main-Repeat-[AudioTrimmer.com].ogg::AudioStreamOggVorbis::2206169510100849329::1745213827::1745213890::1::::<><>::
+Pixel-Lance-Main-Theme-copy-_Main-Repeat.ogg::AudioStreamOggVorbis::5149623984654007263::1745211081::1745213717::1::::<><>::
 ::res://assets/::1744127497
 ::res://assets/Deco/::1744907076
 01.png::CompressedTexture2D::8985257474465574191::1744127496::1744907075::1::::<><>::
@@ -266,12 +269,14 @@ Ribbon_Yellow_Connection_Right.png::CompressedTexture2D::7598357852028325::17441
 Ribbon_Yellow_Connection_Right_Pressed.png::CompressedTexture2D::2379092788555671462::1744127497::1744907075::1::::<><>::
 Ribbon_Yellow_Connection_Up.png::CompressedTexture2D::2209875123235281097::1744127497::1744907075::1::::<><>::
 Ribbon_Yellow_Connection_Up_Pressed.png::CompressedTexture2D::502498907356201027::1744127497::1744907075::1::::<><>::
-::res://bin/::1744909135
+::res://bin/::1745211968
 gdexample.gdextension::GDExtension::-1::1744694234::0::1::::<><>::
-::res://scenes/::1744908988
+::res://scenes/::1745213492
 babyGronk.tscn::PackedScene::1321378578728762916::1744907754::0::1::::<><>::uid://bpm8swqtwf0::::res://assets/Factions/Knights/Troops/Pawn/Yellow/Pawn_Yellow.png<>res://scripts/baby_gronk.gd
 enemy.tscn::PackedScene::691278703659310314::1744907754::0::1::::<><>::uid://bi1a5d404fhn2::::res://assets/Factions/Goblins/Troops/Torch/Purple/Torch_Purple.png
-game.tscn::PackedScene::3366744666236980309::1744908988::0::1::::<><>::res://scripts/game.gd<>uid://s3c6aot7p40g::::res://scenes/babyGronk.tscn<>res://scenes/ui.gd<>uid://dagylx2tote8q::::res://assets/UI/Icons/Regular_02.png<>uid://ds4i84oipyosm::::res://assets/UI/Ribbons/Ribbon_Yellow_3Slides.png
+game.tscn::PackedScene::3366744666236980309::1745213492::0::1::::<><>::res://scripts/game.gd<>uid://s3c6aot7p40g::::res://scenes/babyGronk.tscn<>res://scenes/ui.gd<>uid://cfmrs4gjfaxel::::res://Pixel-Lance-Main-Theme-copy-_Main-Repeat.ogg<>uid://dagylx2tote8q::::res://assets/UI/Icons/Regular_02.png<>res://scenes/music.gd<>uid://ds4i84oipyosm::::res://assets/UI/Ribbons/Ribbon_Yellow_3Slides.png<>res://scenes/menu_button.gd<>uid://byd6f2d70h837::::res://assets/UI/Ribbons/Ribbon_Red_3Slides.png<>uid://dgeglex28ve2j::::res://assets/UI/Icons/Regular_03.png
+menu_button.gd::GDScript::-1::1745210976::0::1::::<>MenuButton<>::
+music.gd::GDScript::-1::1745212814::0::1::::<>AudioStreamPlayer2D<>::
 mute_unmute.gd::GDScript::-1::1744908681::0::1::::<>CheckButton<>::
 ui.gd::GDScript::-1::1744907652::0::1::::<>CanvasLayer<>::
 ::res://scripts/::1744906642
