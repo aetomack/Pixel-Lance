@@ -1,12 +1,12 @@
-#Pixel Lance
+# Pixel Lance
 -------------------------
 
 A top-down 2D medieval wave-based arcade game. Survive until you die!!!!
 
 ------------------------------------
-##Subsystems Implemented
+## Subsystems Implemented
 ---------------------------------
-###AI Enemy(NPC) states
+### AI Enemy(NPC) states
 -------------------------------
-###Original Music and UI Features
+### Original Music and UI Features
 ------------------------------
