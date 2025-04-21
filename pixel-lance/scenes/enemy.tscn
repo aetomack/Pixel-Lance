@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://j34i2xwbagni"]
+[gd_scene load_steps=38 format=3 uid="uid://j34i2xwbagni"]
 
 [ext_resource type="Texture2D" uid="uid://bi1a5d404fhn2" path="res://assets/Factions/Goblins/Troops/Torch/Purple/Torch_Purple.png" id="1_ki6fu"]
 
@@ -261,6 +261,10 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_jq82s"]
 radius = 20.6155
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e51a8"]
+radius = 38.5535
+height = 87.798
+
 [node name="Enemy" type="EnemyAI"]
 position = Vector2(-32.5535, 145.101)
 velocity = Vector2(0.91212, -4.06561)
@@ -274,3 +278,9 @@ autoplay = "move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_jq82s")
+
+[node name="Area2D" type="Area2D" parent="." groups=["enemy"]]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_e51a8")

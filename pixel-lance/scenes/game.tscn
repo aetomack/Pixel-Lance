@@ -31,7 +31,7 @@ rotation = 0.0114655
 [node name="Marker2D" type="Marker2D" parent="Player/Path2D/PathFollow2D"]
 
 [node name="SpawnTimer" type="Timer" parent="."]
-autostart = true
+wait_time = 1.5
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 
@@ -50,4 +50,5 @@ offset_right = 1117.0
 offset_bottom = 645.0
 icon = ExtResource("4_4dix6")
 
+[connection signal="colliding" from="Player" to="." method="_on_player_colliding"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
