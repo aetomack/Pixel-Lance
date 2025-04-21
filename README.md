@@ -1,4 +1,5 @@
-#Pixel Lance!!!!
+#Pixel Lance
+-------------------------
 
 A top-down 2D medieval wave-based arcade game. Survive until you die!!!!
 
