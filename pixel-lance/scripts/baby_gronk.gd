@@ -64,7 +64,9 @@ func _on_battle_box_body_entered(body: Node2D) -> void:
 		score += 1
 		update_score_ui()
 		if not attacking:
-			take_damage(1) # Take 1 damage if hit and not attacking
+			take_damage(1)
+			score -= 1
+			update_score_ui() # Take 1 damage if hit and not attacking
 		
 
 func _on_attack_timer_timeout() -> void:
