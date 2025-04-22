@@ -17,3 +17,10 @@ The behavior of enemies in this manner gives them a more dynamic and intelligent
      
 ### Original Music and UI Features
 ------------------------------
+"Pixel Lance"(the music you're hearing) is an original composition by Spencer Bowden. Transcribed in Musescore, the music interpolates (steals from) "Piano Phase" by Steve Reich, the "Bean Theme" from Stephen Sondheim's "Into the Woods" musical and "The Moon Song" from the SNES Ducktales soundtrack.
+
+
+The Volume Slider in the bottom right corner is a node implemented in C++ with GDExtension, extending HSlider properties to control the decibel level of the music.
+
+
+Other UI elements include: Settings Menu, Health Bar, Game Over Screen, and Score.
