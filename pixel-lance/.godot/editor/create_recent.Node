@@ -1,3 +1,7 @@
+Label
+ProgressBar
+Button
+Control
 TileMap
 VolumeSlider
 MenuButton
@@ -8,5 +12,3 @@ AudioStreamPlayer2D
 Marker2D
 PathFollow2D
 Path2D
-CharacterBody2D
-EnemyAI

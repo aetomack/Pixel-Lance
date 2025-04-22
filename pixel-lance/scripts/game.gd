@@ -9,6 +9,8 @@ var enemies_this_wave
 var enemies_spawned_this_wave = 0
 var num_waves = 2
 
+
+
 func _ready():
 	start_game()
 
@@ -64,4 +66,22 @@ func _on_player_colliding(colliding_body: Node2D, attacking: bool) -> void:
 		enemy_node.queue_free()
 		enemy_count -= 1
 		check_game_state()
+		
+func on_player_death(player):
+	print("Handling player death...")
+	
+	
+	# 2. Change music
+	$Music.stream = preload("res://death.ogg.ogg")
+	$Music.play()
+
+	# 3. Show Game Over UI
+	$UI/GameOverScreen.visible = true
+	$UI/GameOverScreen/FinalScoreLabel.text = "Final Score: " + str($Player.score)
+
+	# 4. OPTIONAL: After some delay, reset the scene or go to Main Menu
+		# 4. Wait for 10 seconds before restarting
+	await get_tree().create_timer(10.0).timeout
+	get_tree().reload_current_scene()
+
 	

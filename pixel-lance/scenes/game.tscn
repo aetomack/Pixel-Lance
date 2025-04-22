@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://bn7417o351rvx"]
+[gd_scene load_steps=77 format=3 uid="uid://bn7417o351rvx"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_ceph5"]
 [ext_resource type="PackedScene" uid="uid://s3c6aot7p40g" path="res://scenes/babyGronk.tscn" id="2_d1o61"]
@@ -2842,6 +2842,36 @@ _data = {
 }
 point_count = 5
 
+[sub_resource type="FontFile" id="FontFile_h7iua"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/500/0/ascent = 0.0
+cache/0/500/0/descent = 0.0
+cache/0/500/0/underline_position = 0.0
+cache/0/500/0/underline_thickness = 0.0
+cache/0/500/0/scale = 1.0
+cache/0/200/0/ascent = 0.0
+cache/0/200/0/descent = 0.0
+cache/0/200/0/underline_position = 0.0
+cache/0/200/0/underline_thickness = 0.0
+cache/0/200/0/scale = 1.0
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_v7nfr"]
+font = SubResource("FontFile_h7iua")
+font_size = 100
+font_color = Color(0.1, 0.1, 0.1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cawoy"]
+outline_color = Color(0.101607, 0.0589541, 0.10948, 1)
+
 [node name="Game Root" type="Node2D"]
 script = ExtResource("1_ceph5")
 
@@ -2907,9 +2937,63 @@ offset_left = 18.0
 offset_top = -12.0
 offset_right = 113.0
 offset_bottom = 4.0
-focus_mode = 1
+focus_mode = 0
 mouse_filter = 1
 value = 100.0
+
+[node name="GameOverScreen" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 614.0
+
+[node name="Label" type="Label" parent="UI/GameOverScreen"]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 122.0
+offset_right = 1101.0
+offset_bottom = 504.0
+text = "GAME OVER!!!"
+label_settings = SubResource("LabelSettings_v7nfr")
+horizontal_alignment = 1
+vertical_alignment = 1
+max_lines_visible = 1
+
+[node name="FinalScoreLabel" type="Label" parent="UI/GameOverScreen"]
+layout_mode = 0
+offset_left = 637.0
+offset_top = 364.0
+offset_right = 677.0
+offset_bottom = 387.0
+
+[node name="HealthBar" type="ProgressBar" parent="UI"]
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 267.0
+offset_bottom = 32.0
+max_value = 5.0
+step = 1.0
+value = 5.0
+
+[node name="Label" type="Label" parent="UI/HealthBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.192
+anchor_bottom = 2.886
+offset_left = 100.0
+offset_top = 22.0
+offset_right = -156.728
+offset_bottom = -32.922
+text = "Health"
+label_settings = SubResource("LabelSettings_cawoy")
+
+[node name="ScoreLabel" type="Label" parent="UI"]
+offset_left = 1077.0
+offset_top = 4.0
+offset_right = 1138.0
+offset_bottom = 27.0
+text = "Score: 0"
 
 [connection signal="colliding" from="Player" to="." method="_on_player_colliding"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
