@@ -26,4 +26,4 @@ The Volume Slider in the bottom right corner is a node implemented in C++ with G
 Other UI elements include: Settings Menu, Health Bar, Game Over Screen, and Score.
 
 Gameplay
-!(Images/Gameplay.png)
+![](Images/Gameplay.png)
