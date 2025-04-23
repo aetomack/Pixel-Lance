@@ -2931,15 +2931,17 @@ value = 100.0
 visible = false
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1154.0
-offset_bottom = 614.0
+offset_left = 11.0
+offset_top = 12.0
+offset_right = 1111.0
+offset_bottom = 567.0
 
 [node name="Label" type="Label" parent="UI/GameOverScreen"]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 122.0
-offset_right = 1101.0
-offset_bottom = 504.0
+offset_left = 133.0
+offset_top = 81.0
+offset_right = 1026.0
+offset_bottom = 463.0
 text = "GAME OVER!!!"
 label_settings = SubResource("LabelSettings_v7nfr")
 horizontal_alignment = 1
