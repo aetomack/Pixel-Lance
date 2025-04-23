@@ -27,4 +27,4 @@ Other UI elements include: Settings Menu, Health Bar, Game Over Screen, and Scor
 
 Gameplay
 ![](Images/Gameplay.png)
-![Video Link](https://www.youtube.com/watch?v=1L9pzPVodGs)
+[Video Link](https://www.youtube.com/watch?v=1L9pzPVodGs)
