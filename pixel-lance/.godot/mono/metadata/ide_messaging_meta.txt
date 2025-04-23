@@ -1,2 +1,2 @@
-﻿49788
-C:/Users/spncr/Downloads/Godot_v4.3-stable_mono_win64/Godot_v4.3-stable_mono_win64/Godot_v4.3-stable_mono_win64.exe
+﻿53675
+/private/var/folders/67/lj5mqf4506vdw01nz_ktnjbh0000gp/T/AppTranslocation/27429A15-4383-479E-B601-816D1175F512/d/Godot_mono.app/Contents/MacOS/Godot
