@@ -10,7 +10,6 @@ var enemies_spawned_this_wave = 0
 var num_waves = 2
 
 
-
 func _ready():
 	start_game()
 
@@ -45,7 +44,20 @@ func start_game():
 	
 	
 func you_win():
-	print("You Win!")
+	print("Handling player win...")
+	
+	
+	# 2. Don't Change music
+
+	# 3. Show Win UI
+	$UI/GameOverScreen.visible = true
+	$UI/GameOverScreen/Label.text = "YOU WINN!!!"
+	$UI/GameOverScreen/FinalScoreLabel.text = "Final Score: " + str($Player.score)
+
+	# 4. OPTIONAL: After some delay, reset the scene or go to Main Menu
+		# 4. Wait for 10 seconds before restarting
+	await get_tree().create_timer(10.0).timeout
+	get_tree().reload_current_scene()
 	
 func _process(delta: float) -> void:
 	pass
@@ -77,6 +89,7 @@ func on_player_death(player):
 
 	# 3. Show Game Over UI
 	$UI/GameOverScreen.visible = true
+	$UI/GameOverScreen/Label.text = "GAME OVER!!!"
 	$UI/GameOverScreen/FinalScoreLabel.text = "Final Score: " + str($Player.score)
 
 	# 4. OPTIONAL: After some delay, reset the scene or go to Main Menu

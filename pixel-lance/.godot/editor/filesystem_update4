@@ -1,3 +1,4 @@
 res://scenes/game.tscn
 res://scenes/enemy.tscn
 res://scenes/babyGronk.tscn
+res://scripts/game.gd
